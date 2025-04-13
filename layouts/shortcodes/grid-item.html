@@ -1,0 +1,6 @@
+<div class="gallery-grid-item">
+  <a href="{{ .Get "src" }}" target="_blank" title="{{ with .Get "caption" }}{{ . }}{{ else }}View larger image{{ end }}">
+    <img src="{{ .Get "src" }}" alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ with .Get "caption" }}{{ . }}{{ else }}Gallery image{{ end }}{{ end }}" />
+  </a>
+  {{ with .Get "caption" }}<p class="caption">{{ . }}</p>{{ end }}
+</div>

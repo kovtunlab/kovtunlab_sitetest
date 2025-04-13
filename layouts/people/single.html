@@ -1,0 +1,27 @@
+{{ define "main" }}
+<article class="post">
+  <h1 class="post-title">{{ .Title }}</h1>
+  
+  {{ with .Params.position }}
+  <h2 class="person-position">{{ . }}</h2>
+  {{ end }}
+
+  {{ if .Params.alumni }}
+  {{ with .Params.current_position }}
+  <div class="person-current-position">
+    Current position: {{ . }}
+  </div>
+  {{ end }}
+  {{ end }}
+
+  {{ with .Params.photo }}
+  <div class="person-photo">
+    <img src="{{ . }}" alt="{{ $.Title }}" />
+  </div>
+  {{ end }}
+  
+  <div class="person-about-me">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

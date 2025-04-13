@@ -1,0 +1,31 @@
+<div class="social-links">
+  {{ if .Site.Params.social.twitter }}
+  <a href="https://twitter.com/{{ .Site.Params.social.twitter }}" target="_blank" rel="noopener" title="Twitter">
+    <span class="social-icon">Twitter</span>
+  </a>
+  {{ end }}
+  
+  {{ if .Site.Params.social.bluesky }}
+  <a href="https://bsky.app/profile/{{ .Site.Params.social.bluesky }}" target="_blank" rel="noopener" title="BlueSky">
+    <span class="social-icon">BlueSky</span>
+  </a>
+  {{ end }}
+  
+  {{ if .Site.Params.social.github }}
+  <a href="https://github.com/{{ .Site.Params.social.github }}" target="_blank" rel="noopener" title="GitHub">
+    <span class="social-icon">GitHub</span>
+  </a>
+  {{ end }}
+  
+  {{ if .Site.Params.social.mpinat }}
+  <a href="{{ .Site.Params.social.mpinat }}" target="_blank" rel="noopener" title="MPI-NAT">
+    <span class="social-icon">MPI-NAT</span>
+  </a>
+  {{ end }}
+  
+  {{ if .Site.Params.social.unigo }}
+  <a href="{{ .Site.Params.social.unigo }}" target="_blank" rel="noopener" title="Uni Göttingen">
+    <span class="social-icon">Uni Göttingen</span>
+  </a>
+  {{ end }}
+</div>

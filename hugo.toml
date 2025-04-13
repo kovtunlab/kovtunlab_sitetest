@@ -1,0 +1,73 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'MemTraLab'
+theme = "hugo-theme-terminal"
+
+[params]
+  # Number of menu items to show (set to 0 to show all)
+  showMenuItems = 6
+  
+  # Custom CSS
+  customCSS = ["css/custom.css"]
+  
+  # Directory where blog posts are stored
+  contentTypeName = "blog"
+  
+  # Social media configuration
+  [params.twitter]
+    creator = "KovtunOleksiy"
+    site = "KovtunOleksiy"
+    
+  # Other social media links
+  [params.social]
+    twitter = "KovtunOleksiy"
+    bluesky = "oleksiykovtun.bsky.social"
+    github = "kovtunlab"
+    mpinat = "https://www.mpinat.mpg.de/kovtun"
+    unigo = "https://www.uni-goettingen.de/de/659736.html"
+    
+  # Ignore warnings about HTML in Markdown
+  ignoreLogs = ['warning-goldmark-raw-html']
+
+# Enable HTML in Markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "MemTraLab"
+    
+    [languages.en.params]
+      subtitle = "understanding cellular logistic since 2021"
+      
+      [languages.en.params.logo]
+        logoText = "Kovtun Lab"
+        logoHomeLink = "/"
+      
+      [[languages.en.menu.main]]
+        identifier = "people"
+        name = "People"
+        url = "/people"
+      [[languages.en.menu.main]]
+        identifier = "research"
+        name = "Research"
+        url = "/research"
+      [[languages.en.menu.main]]
+        identifier = "publications"
+        name = "Publications"
+        url = "/publications"
+      [[languages.en.menu.main]]
+        identifier = "blog"
+        name = "Blog"
+        url = "/blog"
+      [[languages.en.menu.main]]
+        identifier = "join"
+        name = "Join us"
+        url = "/join"
+      [[languages.en.menu.main]]
+        identifier = "gallery"
+        name = "Gallery"
+        url = "/gallery"
